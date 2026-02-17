@@ -58,7 +58,6 @@ transform:translateY(-2px) scale(1.05);
 .hero{
 text-align:center;
 padding:70px 20px;
-animation:fadeUp 1s ease;
 }
 
 .hero h1{
@@ -70,11 +69,10 @@ color:transparent;
 
 .hero p{
 font-size:18px;
-margin-bottom:20px;
 color:#444;
 }
 
-/* Trust Features */
+/* Features */
 .features{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -90,17 +88,11 @@ padding:20px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
 text-align:center;
-transition:0.3s;
-}
-
-.feature-box:hover{
-transform:translateY(-5px);
 }
 
 .feature-box i{
 font-size:30px;
 color:#0a7cff;
-margin-bottom:8px;
 }
 
 /* Services */
@@ -122,20 +114,8 @@ padding:25px;
 border-radius:15px;
 box-shadow:0 8px 25px rgba(0,0,0,0.08);
 text-align:center;
-transition:0.35s;
 cursor:pointer;
-position:relative;
-overflow:hidden;
-}
-
-.card:before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-height:4px;
-width:100%;
-background:linear-gradient(90deg,#0a7cff,#00c6ff);
+transition:0.3s;
 }
 
 .card:hover{
@@ -163,6 +143,44 @@ color:white;
 .icon5{background:#20c997;}
 .icon6{background:#e83e8c;}
 
+/* STATUS SECTION */
+.status-section{
+padding:50px 20px;
+}
+
+.status-box{
+max-width:450px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.status-box input{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+margin-bottom:15px;
+font-size:16px;
+}
+
+.status-box button{
+background:#0a7cff;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+}
+
+#statusResult{
+margin-top:10px;
+font-weight:bold;
+}
+
 /* Payment */
 .payment{
 padding:50px 20px;
@@ -183,11 +201,7 @@ color:white;
 padding:12px 28px;
 border-radius:30px;
 text-decoration:none;
-font-weight:bold;
-transition:0.3s;
 }
-
-.upi-btn:hover{transform:scale(1.05);}
 
 /* Map */
 .map{
@@ -215,12 +229,6 @@ color:#ccc;
 text-align:center;
 padding:15px;
 }
-
-/* Animation */
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
-}
 </style>
 </head>
 
@@ -230,6 +238,7 @@ to{opacity:1;transform:translateY(0);}
 <h2>Dhruv E-Mitra</h2>
 <div>
 <a href="#services">Services</a>
+<a href="#status">Status</a>
 <a href="#payment">Payment</a>
 <a href="#contact">Contact</a>
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSexE2M_ClTygKtoOGFCzTAL-FQH31nt_Hj5TRGV2b3aGhEsFg/viewform" target="_blank" class="btn">Apply Online</a>
@@ -239,13 +248,11 @@ to{opacity:1;transform:translateY(0);}
 <div class="hero">
 <h1>Dhruv E-Mitra Seva Kendra</h1>
 <p>Fast • Reliable • Secure Government Services</p>
-<p>Apply online for Aadhaar, PAN, Certificates and all digital services from home.</p>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSexE2M_ClTygKtoOGFCzTAL-FQH31nt_Hj5TRGV2b3aGhEsFg/viewform" target="_blank" class="btn">Start Your Application</a>
 </div>
 
 <div class="features">
-<div class="feature-box"><i class="fa-solid fa-shield"></i><br>Secure Process</div>
-<div class="feature-box"><i class="fa-solid fa-bolt"></i><br>Fast Service</div>
+<div class="feature-box"><i class="fa-solid fa-shield"></i><br>Secure Service</div>
+<div class="feature-box"><i class="fa-solid fa-bolt"></i><br>Fast Processing</div>
 <div class="feature-box"><i class="fa-solid fa-headset"></i><br>WhatsApp Support</div>
 <div class="feature-box"><i class="fa-solid fa-thumbs-up"></i><br>Trusted Center</div>
 </div>
@@ -258,42 +265,48 @@ to{opacity:1;transform:translateY(0);}
 <div class="card" onclick="openForm()">
 <div class="icon-box icon1"><i class="fa-solid fa-id-card"></i></div>
 <h3>Aadhaar Services</h3>
-<p>Update, Print, Mobile & Address change</p>
 </div>
 
 <div class="card" onclick="openForm()">
 <div class="icon-box icon2"><i class="fa-solid fa-credit-card"></i></div>
 <h3>PAN Card</h3>
-<p>New PAN & Correction</p>
 </div>
 
 <div class="card" onclick="openForm()">
 <div class="icon-box icon3"><i class="fa-solid fa-file"></i></div>
 <h3>Certificates</h3>
-<p>Income, Caste, Domicile</p>
 </div>
 
 <div class="card" onclick="openForm()">
 <div class="icon-box icon4"><i class="fa-solid fa-bolt"></i></div>
 <h3>Bill Payment</h3>
-<p>Electricity, Water, Recharge</p>
 </div>
 
 <div class="card" onclick="openForm()">
 <div class="icon-box icon5"><i class="fa-solid fa-pen"></i></div>
 <h3>Online Forms</h3>
-<p>All Government Forms</p>
 </div>
 
 <div class="card" onclick="openForm()">
 <div class="icon-box icon6"><i class="fa-solid fa-folder"></i></div>
 <h3>Other Services</h3>
-<p>All Digital Services Available</p>
 </div>
 
 </div>
 </div>
 
+<!-- STATUS -->
+<div class="status-section" id="status">
+<h2 style="text-align:center;">Check Application Status</h2>
+
+<div class="status-box">
+<input type="text" id="statusInput" placeholder="Enter Mobile Number or Request ID">
+<button onclick="checkStatus()">Check Status</button>
+<div id="statusResult"></div>
+</div>
+</div>
+
+<!-- PAYMENT -->
 <div class="payment" id="payment">
 <h2>Payment Details</h2>
 <img src="https://i.ibb.co/sJRMjMfq/upi-qr-png.jpg" class="qr">
@@ -322,6 +335,25 @@ Pay via UPI App
 <script>
 function openForm(){
 window.open("https://docs.google.com/forms/d/e/1FAIpQLSexE2M_ClTygKtoOGFCzTAL-FQH31nt_Hj5TRGV2b3aGhEsFg/viewform","_blank");
+}
+
+function checkStatus(){
+let input=document.getElementById("statusInput").value;
+let result=document.getElementById("statusResult");
+
+if(input==""){
+result.innerHTML="Please enter Mobile Number or Request ID";
+result.style.color="red";
+return;
+}
+
+result.innerHTML="Checking...";
+result.style.color="#0a7cff";
+
+setTimeout(()=>{
+result.innerHTML="Your application is under process. Contact WhatsApp for details.";
+result.style.color="green";
+},1500);
 }
 </script>
 
