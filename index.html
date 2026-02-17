@@ -5,302 +5,249 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dhruv E-Mitra Seva Kendra</title>
 
-<!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
 body{
-background:linear-gradient(180deg,#f4f8ff,#e6f0ff);
-color:#1f2937;
-scroll-behavior:smooth;
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#e3f2fd,#f8fbff);
+color:#222;
 }
 
-/* NAVBAR */
+/* Navbar */
 nav{
-position:fixed;
-top:0;
-width:100%;
-background:#ffffffd9;
-backdrop-filter:blur(10px);
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+padding:12px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
-z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
-nav h2{color:#2563eb;}
-nav ul{display:flex;gap:25px;}
-nav ul li{list-style:none;}
-nav ul li a{text-decoration:none;color:#333;font-weight:500;}
-.apply-btn{
-background:#2563eb;
-color:#fff;
-padding:10px 20px;
-border-radius:25px;
+position:sticky;
+top:0;
+z-index:100;
 }
 
-/* HERO */
-.hero{
-padding:140px 10% 80px;
-text-align:center;
+nav h2{
+color:#0077ff;
+margin:0;
 }
-.hero h1{
-font-size:48px;
-margin-bottom:10px;
-}
-.gradient{
-background:linear-gradient(90deg,#2563eb,#06b6d4);
--webkit-background-clip:text;
-color:transparent;
-}
-.btn{
-padding:14px 30px;
-border-radius:30px;
-margin:10px;
-display:inline-block;
+
+nav a{
 text-decoration:none;
+margin:0 12px;
+color:#333;
 font-weight:600;
+}
+
+.btn{
+background:#0077ff;
+color:white;
+padding:12px 22px;
+border-radius:25px;
+text-decoration:none;
+display:inline-block;
 transition:0.3s;
 }
-.primary{background:#2563eb;color:#fff;}
-.primary:hover{transform:scale(1.05);}
-.outline{border:2px solid #2563eb;color:#2563eb;}
-.outline:hover{background:#2563eb;color:#fff;}
 
-/* FEATURES */
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-padding:40px 10%;
-text-align:center;
+.btn:hover{
+background:#0056d6;
+transform:scale(1.05);
 }
-.feature i{
-font-size:35px;
-color:#2563eb;
+
+/* Hero */
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:40px;
+color:#0077ff;
+}
+
+/* Services */
+.services{
+padding:40px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:center;
+transition:0.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.icon{
+font-size:38px;
+color:#0077ff;
 margin-bottom:10px;
 }
 
-/* SECTIONS */
-.section{padding:80px 10%;}
-.section h2{text-align:center;font-size:34px;margin-bottom:40px;}
-
-/* SERVICES */
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-.service-card{
-background:#fff;
-padding:30px;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,0.08);
-transition:0.4s;
-}
-.service-card:hover{
-transform:translateY(-10px);
-}
-.service-icon{
-width:60px;height:60px;border-radius:15px;
-display:flex;align-items:center;justify-content:center;
-font-size:26px;color:#fff;margin-bottom:15px;
-}
-.icon-blue{background:#3b82f6;}
-.icon-green{background:#10b981;}
-.icon-purple{background:#8b5cf6;}
-.icon-orange{background:#f97316;}
-.service-card a{
-display:inline-block;margin-top:10px;
-color:#2563eb;text-decoration:none;font-weight:600;
-}
-
-/* PRICING */
-.pricing{
-background:#fff;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-max-width:600px;
-margin:auto;
-}
-.price-row{
-display:flex;
-justify-content:space-between;
-padding:12px;
-border-bottom:1px solid #eee;
-}
-.price-row b{color:#2563eb;}
-
-/* PAYMENT */
-.payment-card{
-max-width:380px;
-margin:40px auto;
-padding:30px;
-border-radius:25px;
-background:linear-gradient(135deg,#06b6d4,#2563eb);
-color:#fff;
+/* Payment */
+.payment{
+padding:40px 20px;
 text-align:center;
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
-.payment-card img{
-width:100%;
+
+.qr{
+width:260px;
 border-radius:12px;
-margin:15px 0;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
-.pay-btn{
+
+.upi-btn{
+margin-top:15px;
+display:inline-block;
 background:#16a34a;
-color:#fff;
-padding:14px 28px;
+color:white;
+padding:12px 25px;
 border-radius:30px;
 text-decoration:none;
-display:inline-block;
-margin-top:10px;
-font-weight:600;
+font-weight:bold;
 }
 
-/* MAP */
-.map iframe{
+/* Map */
+.map{
+padding:40px 20px;
+}
+
+iframe{
 width:100%;
 height:350px;
+border-radius:12px;
 border:none;
-border-radius:20px;
 }
 
-/* CONTACT */
+/* Contact */
 .contact{
-background:linear-gradient(135deg,#020617,#0f172a);
-color:#fff;
-padding:70px 10%;
+background:#001a33;
+color:white;
+padding:40px 20px;
 text-align:center;
 }
 
-/* FOOTER */
 footer{
-background:#020617;
-color:#9ca3af;
-padding:20px;
+background:#000d1a;
+color:#ccc;
 text-align:center;
+padding:15px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
 <h2>Dhruv E-Mitra</h2>
-<ul>
-<li><a href="#services">Services</a></li>
-<li><a href="#payment">Payment</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a class="apply-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSexE2M_ClTygKtoOGFCzTAL-FQH31nt_Hj5TRGV2b3aGhEsFg/viewform" target="_blank">Apply</a></li>
-</ul>
+<div>
+<a href="#services">Services</a>
+<a href="#payment">Payment</a>
+<a href="#contact">Contact</a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSexE2M_ClTygKtoOGFCzTAL-FQH31nt_Hj5TRGV2b3aGhEsFg/viewform" target="_blank" class="btn">Apply Online</a>
+</div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-<h1>Dhruv <span class="gradient">E-Mitra Seva Kendra</span></h1>
-<p>Fast • Reliable • Secure Government Services</p>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSexE2M_ClTygKtoOGFCzTAL-FQH31nt_Hj5TRGV2b3aGhEsFg/viewform" target="_blank" class="btn primary">Apply Online</a>
-<a href="https://wa.me/919079368240" target="_blank" class="btn outline">WhatsApp Support</a>
-</section>
+<div class="hero">
+<h1>Dhruv E-Mitra Seva Kendra</h1>
+<p>All Government Services Online – Fast & Secure</p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSexE2M_ClTygKtoOGFCzTAL-FQH31nt_Hj5TRGV2b3aGhEsFg/viewform" target="_blank" class="btn">Apply Now</a>
+</div>
 
-<!-- FEATURES -->
-<section class="features">
-<div class="feature"><i class="fa-solid fa-shield-halved"></i><p>Trusted Center</p></div>
-<div class="feature"><i class="fa-solid fa-bolt"></i><p>Fast Processing</p></div>
-<div class="feature"><i class="fa-solid fa-lock"></i><p>Secure Payment</p></div>
-<div class="feature"><i class="fa-brands fa-whatsapp"></i><p>24x7 Support</p></div>
-</section>
+<div class="services" id="services">
+<h2 style="text-align:center;">Our Services</h2>
 
-<!-- SERVICES -->
-<section class="section" id="services">
-<h2>Our Services</h2>
-<div class="services">
+<div class="grid">
 
-<div class="service-card">
-<div class="service-icon icon-blue"><i class="fa-solid fa-id-card"></i></div>
+<div class="card" onclick="openForm()">
+<div class="icon"><i class="fa-solid fa-id-card"></i></div>
 <h3>Aadhaar Services</h3>
-<p>New / Update / Download</p>
+<p>Update, Print, Mobile & Address change</p>
 </div>
 
-<div class="service-card">
-<div class="service-icon icon-orange"><i class="fa-solid fa-credit-card"></i></div>
+<div class="card" onclick="openForm()">
+<div class="icon"><i class="fa-solid fa-credit-card"></i></div>
 <h3>PAN Card</h3>
-<p>New / Correction / Reprint</p>
+<p>New PAN & Correction</p>
 </div>
 
-<div class="service-card">
-<div class="service-icon icon-green"><i class="fa-solid fa-file"></i></div>
+<div class="card" onclick="openForm()">
+<div class="icon"><i class="fa-solid fa-file"></i></div>
 <h3>Certificates</h3>
-<p>Income / Caste / Domicile</p>
+<p>Income, Caste, Domicile</p>
 </div>
 
-<div class="service-card">
-<div class="service-icon icon-purple"><i class="fa-solid fa-bolt"></i></div>
-<h3>Bill Payments</h3>
-<p>Electricity / Water / Mobile</p>
+<div class="card" onclick="openForm()">
+<div class="icon"><i class="fa-solid fa-bolt"></i></div>
+<h3>Bill Payment</h3>
+<p>Electricity, Water, Recharge</p>
+</div>
+
+<div class="card" onclick="openForm()">
+<div class="icon"><i class="fa-solid fa-pen"></i></div>
+<h3>Online Form Filling</h3>
+<p>All Government Forms</p>
+</div>
+
+<div class="card" onclick="openForm()">
+<div class="icon"><i class="fa-solid fa-folder"></i></div>
+<h3>Other Services</h3>
+<p>All Digital Services Available</p>
 </div>
 
 </div>
-</section>
-
-<!-- PRICING -->
-<section class="section">
-<h2>Pricing</h2>
-<div class="pricing">
-<div class="price-row">Aadhaar Update <b>₹50</b></div>
-<div class="price-row">PAN Card <b>₹120</b></div>
-<div class="price-row">Income/Caste/Domicile <b>₹100</b></div>
-<div class="price-row">Bill Payment <b>₹20</b></div>
-<div class="price-row">Form Filling <b>₹70 Minimum</b></div>
 </div>
-</section>
 
-<!-- PAYMENT -->
-<section class="section" id="payment">
+<div class="payment" id="payment">
 <h2>Payment Details</h2>
-<div class="payment-card">
-<h3>Tarun Singh</h3>
-<p>UPI: tarun.8240@ptyes</p>
 
-<img src="https://i.ibb.co/sJRMjMfq/upi-qr-png.jpg">
+<img src="https://i.ibb.co/sJRMjMfq/upi-qr-png.jpg" class="qr">
 
-<a class="pay-btn" href="upi://pay?pa=tarun.8240@ptyes&pn=Tarun%20Singh&cu=INR">
-Pay Now (Direct UPI)
+<p><b>UPI:</b> tarun.8240@ptyes</p>
+
+<a class="upi-btn" href="upi://pay?pa=tarun.8240@ptyes&pn=Tarun%20Singh&cu=INR">
+Pay via UPI App
 </a>
-
-<p style="margin-top:10px;">
-After payment send screenshot on WhatsApp<br>
-+91 9079368240
-</p>
 </div>
-</section>
 
-<!-- MAP -->
-<section class="section">
-<h2>Visit Our Center</h2>
 <div class="map">
+<h2 style="text-align:center;">Visit Our Center</h2>
 <iframe src="https://www.google.com/maps?q=27.2067169,77.5246241&z=17&output=embed"></iframe>
 </div>
-</section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-<h2>Get in Touch</h2>
-<p>Call: +91 9079368240</p>
+<div class="contact" id="contact">
+<h2>Contact Us</h2>
+<p>Phone: +91 9079368240</p>
 <p>Email: tarunsinghgunesh@gmail.com</p>
-<p>Time: 9 AM – 7 PM (All Days)</p>
-<a href="https://wa.me/919079368240" class="btn primary">Chat on WhatsApp</a>
-</section>
+<a class="btn" href="https://wa.me/919079368240" target="_blank">Chat on WhatsApp</a>
+</div>
 
 <footer>
 © 2026 Dhruv E-Mitra Seva Kendra
 </footer>
 
+<script>
+function openForm(){
+window.open("https://docs.google.com/forms/d/e/1FAIpQLSexE2M_ClTygKtoOGFCzTAL-FQH31nt_Hj5TRGV2b3aGhEsFg/viewform","_blank");
+}
+</script>
+
 </body>
 </html>
+
