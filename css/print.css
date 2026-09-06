@@ -1,0 +1,131 @@
+/* ==========================================================================
+   DHRUV E-MITRA SEVA KENDRA - PRINT & INVOICE STYLESHEET (A4)
+   ========================================================================== */
+
+@media print {
+  *, *::before, *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide UI elements during print */
+  nav,
+  .announcement-bar,
+  .mobile-bottom-bar,
+  .floats,
+  .no-print,
+  .btn-group-receipt,
+  footer,
+  .site-header {
+    display: none !important;
+  }
+
+  .print-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 15mm 15mm !important;
+    box-sizing: border-box !important;
+    page-break-inside: avoid !important;
+  }
+
+  .receipt-card {
+    border: 1.5px solid #0c3875 !important;
+    border-radius: 8px !important;
+    padding: 24px !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .receipt-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    border-bottom: 2px solid #0c3875 !important;
+    padding-bottom: 16px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .receipt-logo h2 {
+    font-size: 18pt !important;
+    color: #0c3875 !important;
+    margin: 0 !important;
+    font-weight: 700 !important;
+  }
+
+  .receipt-tag {
+    font-size: 9pt !important;
+    color: #4b5563 !important;
+  }
+
+  .receipt-badge-paid {
+    border: 2px solid #059669 !important;
+    color: #059669 !important;
+    background: #ecfdf5 !important;
+    padding: 6px 14px !important;
+    font-size: 11pt !important;
+    font-weight: bold !important;
+    border-radius: 6px !important;
+    display: inline-block !important;
+    text-transform: uppercase !important;
+  }
+
+  .receipt-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .receipt-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 20px 0 !important;
+  }
+
+  .receipt-table th {
+    background-color: #f1f5f9 !important;
+    color: #0c3875 !important;
+    padding: 8px 12px !important;
+    font-size: 10pt !important;
+    border: 1px solid #cbd5e1 !important;
+    text-align: left !important;
+  }
+
+  .receipt-table td {
+    padding: 8px 12px !important;
+    border: 1px solid #cbd5e1 !important;
+    font-size: 10pt !important;
+  }
+
+  .receipt-total-row {
+    font-weight: bold !important;
+    font-size: 12pt !important;
+    background: #f8fafc !important;
+    color: #0c3875 !important;
+  }
+
+  .receipt-footer {
+    border-top: 1px dashed #94a3b8 !important;
+    margin-top: 24px !important;
+    padding-top: 16px !important;
+    font-size: 8.5pt !important;
+    color: #64748b !important;
+    text-align: center !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+}

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services Directory | Dhruv E-Mitra Seva Kendra</title>
+  <meta name="description" content="Explore complete directory of Rajasthan government and citizen services at Dhruv E-Mitra Seva Kendra. Check required documents, timeline, and apply online.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+  <!-- Top Notice Bar -->
+  <div class="top-notice-bar">
+    <div class="container">
+      <div class="notice-inner">
+        <div class="notice-content">
+          <span class="notice-badge"><i class="fa-solid fa-bell"></i> सूचना / Notice</span>
+          <span class="notice-text" id="noticeTickerText">राजस्थान छात्रवृत्ति एवं जन आधार e-KYC के ऑनलाइन आवेदन केंद्र पर शुरू हैं।</span>
+        </div>
+        <div class="top-actions">
+          <button class="lang-switch-btn" id="langSwitchBtn">
+            <i class="fa-solid fa-globe"></i> English
+          </button>
+          <a href="admin.html" style="color:#cbd5e1;font-weight:600;"><i class="fa-solid fa-user-shield"></i> ऑपरेटर लॉगिन</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-wrapper">
+          <div class="brand-logo-icon"><i class="fa-solid fa-landmark"></i></div>
+          <div>
+            <div class="brand-title" data-i18n="siteTitle">Dhruv E-Mitra Seva Kendra</div>
+            <div class="brand-subtitle" data-i18n="govBadge">Authorized Citizen Service Assistance</div>
+          </div>
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html"><i class="fa-solid fa-house"></i> <span data-i18n="navHome">होम</span></a></li>
+          <li class="nav-item"><a href="services.html" class="active"><i class="fa-solid fa-layer-group"></i> <span data-i18n="navServices">सेवाएं</span></a></li>
+          <li class="nav-item"><a href="forms.html"><i class="fa-solid fa-file-pdf"></i> <span data-i18n="navForms">फॉर्म व गाइडलाइन</span></a></li>
+          <li class="nav-item"><a href="status.html"><i class="fa-solid fa-magnifying-glass-chart"></i> <span data-i18n="navStatus">स्थिति जांचें</span></a></li>
+          <li class="nav-item"><a href="payment.html"><i class="fa-solid fa-credit-card"></i> <span data-i18n="navPayment">शुल्क भुगतान</span></a></li>
+          <li class="nav-item"><a href="receipt.html"><i class="fa-solid fa-receipt"></i> <span data-i18n="navReceipt">रसीद खोजें</span></a></li>
+          <li class="nav-item"><a href="index.html#contact"><i class="fa-solid fa-phone"></i> <span data-i18n="navContact">संपर्क</span></a></li>
+        </ul>
+
+        <div class="header-cta-group">
+          <a href="tel:+919079368240" class="btn-contact-call"><i class="fa-solid fa-phone-volume"></i> 9079368240</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSexE2M_ClTygKtoOGFCzTAL-FQH31nt_Hj5TRGV2b3aGhEsFg/viewform" target="_blank" class="btn-header-apply">
+            <i class="fa-solid fa-paper-plane"></i> <span data-i18n="navApply">ऑनलाइन आवेदन</span>
+          </a>
+          <button class="hamburger-btn" id="hamburgerBtn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <ul class="mobile-drawer-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> <span>होम / Home</span></a></li>
+        <li><a href="services.html" class="active"><i class="fa-solid fa-layer-group"></i> <span>सभी सेवाएं / Services</span></a></li>
+        <li><a href="forms.html"><i class="fa-solid fa-file-pdf"></i> <span>सरकारी फॉर्म / Forms Hub</span></a></li>
+        <li><a href="status.html"><i class="fa-solid fa-magnifying-glass-chart"></i> <span>आवेदन स्थिति / Track Status</span></a></li>
+        <li><a href="payment.html"><i class="fa-solid fa-credit-card"></i> <span>शुल्क भुगतान / Pay Online</span></a></li>
+        <li><a href="receipt.html"><i class="fa-solid fa-receipt"></i> <span>रसीद खोजें / Find Receipt</span></a></li>
+        <li><a href="index.html#contact"><i class="fa-solid fa-location-dot"></i> <span>स्थान व संपर्क / Contact</span></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Breadcrumb & Header -->
+  <div class="page-title-banner">
+    <div class="container">
+      <div class="breadcrumb-link">
+        <a href="index.html">होम</a> &nbsp;/&nbsp; <span>सेवा निर्देशिका (Services Directory)</span>
+      </div>
+      <h1>
+        ई-मित्र <span class="text-3d-gradient">नागरिक सेवा निर्देशिका</span>
+      </h1>
+      <p>
+        राजस्थान सरकार की सभी प्रमाण पत्र, जन आधार, राजस्व, शिक्षा, रोजगार व बिल भुगतान सेवाओं की सूची एवं अनिवार्य दस्तावेजों की चेकलिस्ट।
+      </p>
+    </div>
+  </div>
+
+  <!-- Search & Directory Section -->
+  <main class="section section-pattern-bg">
+    <div class="container">
+      
+      <!-- Controls -->
+      <div class="directory-controls">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="serviceSearchInput" placeholder="सेवा खोजें (जैसे: जाति, मूल निवास, जन आधार, पेंशन, बिजली बिल)..." aria-label="Search Services">
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+          <div style="font-size:13px;font-weight:700;color:var(--gov-blue-dark);">
+            <i class="fa-solid fa-filter"></i> श्रेणी अनुसार छांटें (Filter by Category):
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <label for="serviceSortSelect" style="font-size:12px;font-weight:600;color:var(--text-muted);">क्रम / Sort:</label>
+            <select id="serviceSortSelect" style="padding:5px 10px;border-radius:6px;border:1px solid var(--border-color);font-size:13px;">
+              <option value="popular">लोकप्रिय / Popular</option>
+              <option value="az">अ से ज्ञ (A to Z)</option>
+              <option value="category">श्रेणीवार / Category</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="category-pills" id="categoryPillsContainer">
+          <!-- Populated from data.js -->
+        </div>
+      </div>
+
+      <!-- Result Counter -->
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;font-size:13px;color:var(--text-muted);">
+        <div id="serviceCountDisplay">कुल सेवाएं दिख रही हैं: <strong>0</strong></div>
+        <div style="font-size:12px;color:var(--text-subtle);">
+          <i class="fa-solid fa-circle-info"></i> अधिक जानकारी के लिए किसी भी सेवा पर क्लिक करें
+        </div>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="services-list-grid" id="servicesGridContainer">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="noServicesFound" style="display:none;text-align:center;padding:60px 20px;background:#ffffff;border-radius:12px;border:1px dashed #cbd5e1;">
+        <i class="fa-solid fa-folder-open" style="font-size:48px;color:#94a3b8;margin-bottom:16px;"></i>
+        <h3 style="font-size:18px;color:var(--gov-blue-dark);margin-bottom:8px;">कोई सेवा नहीं मिली / No Services Found</h3>
+        <p style="color:var(--text-muted);font-size:14px;max-width:400px;margin:0 auto 20px;">
+          कृपया दूसरा शब्द खोजें अथवा सीधे हमारे केंद्र से व्हाट्सएप पर सहायता प्राप्त करें।
+        </p>
+        <button onclick="clearServiceSearch()" class="btn btn-outline btn-sm">खोज रीसेट करें / Clear Search</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        © 2026 Dhruv E-Mitra Seva Kendra, Brij Nagar, Bharatpur, Rajasthan, India. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Bar -->
+  <nav class="mobile-bottom-bar">
+    <a href="index.html" class="bottom-tab"><i class="fa-solid fa-house"></i><span>होम</span></a>
+    <a href="services.html" class="bottom-tab active"><i class="fa-solid fa-layer-group"></i><span>सेवाएं</span></a>
+    <a href="forms.html" class="bottom-tab"><i class="fa-solid fa-file-pdf"></i><span>फॉर्म्स</span></a>
+    <a href="status.html" class="bottom-tab"><i class="fa-solid fa-magnifying-glass"></i><span>स्थिति</span></a>
+    <a href="payment.html" class="bottom-tab highlight"><i class="fa-solid fa-credit-card"></i><span>पेमेंट</span></a>
+  </nav>
+
+  <!-- Service Detail Modal -->
+  <div class="modal-overlay" id="serviceModal">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeModal('serviceModal')">&times;</button>
+      <div style="margin-bottom:12px;">
+        <span class="badge-tag badge-gov" id="modalServiceDept">Revenue Department</span>
+      </div>
+      <h3 id="modalServiceTitle" style="color:var(--gov-blue-dark);font-size:20px;font-weight:800;margin-bottom:10px;">Title</h3>
+      <p id="modalServiceDesc" style="font-size:14px;color:var(--text-muted);margin-bottom:20px;line-height:1.6;">Desc</p>
+      
+      <div style="background:var(--bg-main);border:1px solid var(--border-color);border-radius:10px;padding:16px;margin-bottom:20px;">
+        <h4 style="font-size:14px;font-weight:700;color:var(--gov-blue-dark);margin-bottom:10px;">
+          <i class="fa-solid fa-list-check" style="color:var(--gov-blue-primary);"></i> आवश्यक दस्तावेज चेकलिस्ट
+        </h4>
+        <ul id="modalServiceDocsList" style="list-style:none;padding:0;margin:0;font-size:13px;"></ul>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;font-size:12px;">
+        <div style="background:#f1f5f9;padding:10px;border-radius:8px;">
+          <div style="color:var(--text-subtle);">प्रक्रिया अवधि:</div>
+          <strong id="modalServiceTimeline">-</strong>
+        </div>
+        <div style="background:#f1f5f9;padding:10px;border-radius:8px;">
+          <div style="color:var(--text-subtle);">अनुमानित शुल्क:</div>
+          <strong id="modalServiceFee">-</strong>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button id="modalServiceApplyBtn" class="btn btn-primary" style="flex:1;">
+          <i class="fa-brands fa-whatsapp"></i> केंद्र से आवेदन कराएं
+        </button>
+        <a id="modalServiceOfficialBtn" href="#" target="_blank" class="btn btn-outline" style="flex:1;">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> आधिकारिक पोर्टल
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    let activeCategory = 'all';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCategoryPills();
+      renderServicesDirectory();
+
+      const searchInput = document.getElementById('serviceSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', () => renderServicesDirectory());
+      }
+
+      const sortSelect = document.getElementById('serviceSortSelect');
+      if (sortSelect) {
+        sortSelect.addEventListener('change', () => renderServicesDirectory());
+      }
+    });
+
+    function renderCategoryPills() {
+      const container = document.getElementById('categoryPillsContainer');
+      if (!container) return;
+
+      container.innerHTML = SERVICE_CATEGORIES.map(cat => `
+        <button class="cat-pill ${cat.id === activeCategory ? 'active' : ''}" onclick="selectCategory('${cat.id}')">
+          <i class="fa-solid ${cat.icon}"></i> ${currentLang === 'hi' ? cat.nameHi : cat.nameEn}
+        </button>
+      `).join('');
+    }
+
+    function selectCategory(catId) {
+      activeCategory = catId;
+      renderCategoryPills();
+      renderServicesDirectory();
+    }
+
+    function clearServiceSearch() {
+      document.getElementById('serviceSearchInput').value = '';
+      activeCategory = 'all';
+      renderCategoryPills();
+      renderServicesDirectory();
+    }
+
+    function renderServicesDirectory() {
+      const container = document.getElementById('servicesGridContainer');
+      const emptyState = document.getElementById('noServicesFound');
+      const countDisplay = document.getElementById('serviceCountDisplay');
+      if (!container) return;
+
+      const q = (document.getElementById('serviceSearchInput')?.value || '').toLowerCase().trim();
+      const sortType = document.getElementById('serviceSortSelect')?.value || 'popular';
+
+      let filtered = SERVICES_DATA.filter(svc => {
+        const matchesCategory = activeCategory === 'all' || svc.category === activeCategory;
+        const nameHi = (svc.nameHi || '').toLowerCase();
+        const nameEn = (svc.nameEn || '').toLowerCase();
+        const descHi = (svc.descriptionHi || '').toLowerCase();
+        const descEn = (svc.descriptionEn || '').toLowerCase();
+        const docs = (svc.requiredDocs || []).join(' ').toLowerCase();
+
+        const matchesQuery = !q || nameHi.includes(q) || nameEn.includes(q) || descHi.includes(q) || descEn.includes(q) || docs.includes(q);
+        return matchesCategory && matchesQuery;
+      });
+
+      // Sorting
+      if (sortType === 'az') {
+        filtered.sort((a, b) => (currentLang === 'hi' ? a.nameHi.localeCompare(b.nameHi) : a.nameEn.localeCompare(b.nameEn)));
+      } else if (sortType === 'popular') {
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
+      }
+
+      if (countDisplay) {
+        countDisplay.innerHTML = `कुल सेवाएं दिख रही हैं: <strong>${filtered.length}</strong>`;
+      }
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        if (emptyState) emptyState.style.display = 'block';
+        return;
+      }
+
+      if (emptyState) emptyState.style.display = 'none';
+
+      container.innerHTML = filtered.map(svc => `
+        <div class="service-item-card">
+          <div>
+            <div class="svc-item-header">
+              <h3 class="svc-item-title">${currentLang === 'hi' ? svc.nameHi : svc.nameEn}</h3>
+              <span class="svc-item-badge">${svc.category}</span>
+            </div>
+            <div style="font-size:12px;color:var(--gov-saffron);font-weight:700;margin-bottom:8px;">
+              ${svc.department}
+            </div>
+            <p class="svc-item-desc">
+              ${currentLang === 'hi' ? svc.descriptionHi : svc.descriptionEn}
+            </p>
+
+            <div class="svc-req-box">
+              <div class="svc-req-title">
+                <i class="fa-solid fa-list-check" style="color:var(--gov-blue-primary);"></i> आवश्यक दस्तावेज:
+              </div>
+              <ul class="svc-req-list">
+                ${svc.requiredDocs.slice(0, 3).map(d => `<li>• ${d}</li>`).join('')}
+                ${svc.requiredDocs.length > 3 ? `<li style="color:var(--gov-blue-primary);font-weight:600;">+ ${svc.requiredDocs.length - 3} अन्य दस्तावेज...</li>` : ''}
+              </ul>
+            </div>
+          </div>
+
+          <div class="svc-actions">
+            <button onclick="showServiceDetails('${svc.id}')" class="btn btn-primary btn-sm" style="flex:1;">
+              <i class="fa-solid fa-eye"></i> विवरण व दस्तावेज
+            </button>
+            <button onclick="openWhatsAppForService('${svc.nameEn}')" class="btn btn-outline btn-sm" title="व्हाट्सएप पर सहायता">
+              <i class="fa-brands fa-whatsapp" style="color:#25d366"></i>
+            </button>
+            <a href="${svc.officialUrl || DHRUV_CONFIG.officialEmitra.portal}" target="_blank" class="btn btn-outline btn-sm" title="आधिकारिक पोर्टल">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+</html>
