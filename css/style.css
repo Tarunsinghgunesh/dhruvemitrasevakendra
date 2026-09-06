@@ -192,71 +192,97 @@ button, input, select, textarea {
 }
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 74px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  height: 74px !important;
+  min-height: 74px !important;
+  gap: 16px;
+  overflow: visible;
 }
 
 .brand-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-shrink: 0 !important;
+  min-width: max-content !important;
+  text-decoration: none !important;
+  height: 100% !important;
 }
 
 .brand-logo-icon {
-  width: 44px;
-  height: 44px;
+  width: 44px !important;
+  height: 44px !important;
   background: linear-gradient(135deg, var(--gov-blue-primary), #1e40af);
   color: #ffffff;
   border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   font-size: 22px;
   box-shadow: 0 4px 10px rgba(12, 56, 117, 0.25);
-  flex-shrink: 0;
+  flex-shrink: 0 !important;
   border: 2px solid #bfdbfe;
 }
 
+.brand-wrapper > div:not(.brand-logo-icon),
+.brand-text {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  min-width: max-content !important;
+  white-space: nowrap !important;
+}
+
 .brand-title {
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--gov-blue-dark);
-  line-height: 1.2;
+  font-size: 16.5px !important;
+  font-weight: 800 !important;
+  color: var(--gov-blue-dark) !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  letter-spacing: -0.2px;
 }
 
 .brand-subtitle {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--gov-saffron);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  color: var(--gov-saffron) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
+  margin: 2px 0 0 0 !important;
+  padding: 0 !important;
 }
 
 .nav-menu {
   display: none;
   align-items: center;
-  gap: 6px;
+  gap: 3px;
   list-style: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .nav-menu {
     display: flex;
   }
 }
 
 .nav-item a {
-  padding: 8px 14px;
+  padding: 7px 11px;
   border-radius: var(--radius-md);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13.5px;
   color: var(--text-muted);
   transition: var(--transition);
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
+  white-space: nowrap;
 }
 
 .nav-item a:hover,
@@ -284,7 +310,7 @@ button, input, select, textarea {
   transition: var(--transition);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1300px) {
   .btn-contact-call {
     display: inline-flex;
   }
@@ -298,10 +324,10 @@ button, input, select, textarea {
 .btn-header-apply {
   background: linear-gradient(135deg, var(--gov-saffron), #c2410c);
   color: #ffffff;
-  padding: 10px 18px;
+  padding: 9px 16px;
   border-radius: var(--radius-full);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13.5px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -328,7 +354,7 @@ button, input, select, textarea {
   justify-content: center;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .hamburger-btn {
     display: none;
   }
@@ -886,6 +912,19 @@ button, input, select, textarea {
 /* ==========================================================================
    TEXTURED SECTIONS & 3D INTERACTIVE CARDS
    ========================================================================== */
+.section {
+  padding: 60px 0;
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 44px 0;
+  }
+}
+
 .section-pattern-bg {
   position: relative;
   background: linear-gradient(180deg, rgba(248, 250, 252, 0.95) 0%, rgba(241, 245, 249, 0.96) 100%),
@@ -894,55 +933,76 @@ button, input, select, textarea {
 
 .section-head {
   text-align: center;
-  max-width: 720px;
-  margin: 0 auto 46px;
+  max-width: 820px;
+  margin: 0 auto 44px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
   position: relative;
+  width: 100%;
+  clear: both;
 }
 
 .section-tag {
-  display: inline-block;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background: linear-gradient(135deg, rgba(12, 56, 117, 0.08), rgba(234, 88, 12, 0.1));
   color: var(--gov-blue-primary);
   border: 1px solid rgba(12, 56, 117, 0.2);
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  padding: 6px 16px;
+  letter-spacing: 1px;
+  padding: 6px 18px;
   border-radius: var(--radius-full);
-  margin-bottom: 12px;
+  margin: 0 auto 16px !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  width: auto;
+  max-width: max-content;
+  align-self: center;
 }
 
 .section-title {
-  font-size: clamp(24px, 3.6vw, 38px);
+  display: block !important;
+  width: 100%;
+  font-size: clamp(22px, 3.5vw, 36px);
   font-weight: 900;
   color: var(--gov-blue-dark);
-  margin-bottom: 16px;
-  line-height: 1.25;
-  letter-spacing: -0.5px;
+  margin: 0 0 20px 0 !important;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
   position: relative;
-  display: inline-block;
+  text-align: center;
+  padding-bottom: 16px;
+  clear: both;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .section-title::after {
   content: '';
   position: absolute;
-  bottom: -8px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   height: 4px;
+  width: 70px;
   background: linear-gradient(90deg, var(--gov-saffron), var(--gov-gold), var(--gov-blue-primary));
   border-radius: var(--radius-full);
   box-shadow: 0 2px 8px rgba(234, 88, 12, 0.4);
-  animation: pulseLineWidth 3.5s ease-in-out infinite alternate;
 }
 
 .section-desc {
-  font-size: 15.5px;
+  display: block !important;
+  width: 100%;
+  font-size: 15px;
   color: var(--text-muted);
-  margin-top: 8px;
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto !important;
+  text-align: center;
 }
 
 .quick-services-grid {
